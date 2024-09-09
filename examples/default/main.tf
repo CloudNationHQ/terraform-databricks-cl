@@ -30,7 +30,7 @@ module "dbw" {
 }
 
 module "cluster" {
-  source  = "cloudnationhq/cl/db"
+  source  = "cloudnationhq/cl/databricks"
   version = "~> 1.0"
 
   cluster = {
