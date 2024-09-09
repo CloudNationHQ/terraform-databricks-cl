@@ -50,8 +50,8 @@ End-to-end testing is not conducted on these modules, as they are individual com
 | :-- | :-- |
 | [databricks_cluster](https://registry.terraform.io/providers/databricks/databricks/latest/docs/resources/cluster) | resource |
 | [databricks_permissions](https://registry.terraform.io/providers/databricks/databricks/latest/docs/resources/permissions) | resource |
-| [databricks_spark_version](https://registry.terraform.io/providers/databricks/databricks/latest/docs/data-sources/spark_version) | data resource |
-| [databricks_node_type](https://registry.terraform.io/providers/databricks/databricks/latest/docs/data-sources/node_type) | data resource |
+| [databricks_spark_version](https://registry.terraform.io/providers/databricks/databricks/latest/docs/data-sources/spark_version) | data source |
+| [databricks_node_type](https://registry.terraform.io/providers/databricks/databricks/latest/docs/data-sources/node_type) | data source |
 
 ## Inputs
 
