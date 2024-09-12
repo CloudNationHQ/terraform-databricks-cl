@@ -40,10 +40,7 @@ module "cluster" {
     runtime_version = "14.1.x-scala2.12"
 
     node_type = {
-      min_memory_gb = 16
-      gb_per_core   = 4
-      min_cores     = 4
-      category      = "Standard"
+      id = "Standard_D4ds_v5"
     }
   }
 

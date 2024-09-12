@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/cloudnationhq/terraform-db-cl/shared"
+	"github.com/cloudnationhq/terraform-databricks-cl/shared"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 )
 

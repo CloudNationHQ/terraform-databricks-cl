@@ -1,6 +1,6 @@
-module github.com/cloudnationhq/terraform-db-cl
+module github.com/cloudnationhq/terraform-databricks-cl
 
-go 1.20
+go 1.23.1
 
 require github.com/gruntwork-io/terratest v0.47.1
 
