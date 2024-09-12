@@ -11,6 +11,7 @@ cluster = object({
   num_workers                  = optional(number, 1)
 
   node_type = optional(object({
+      id                      = optional(string)
       min_memory_gb           = optional(number)
       gb_per_core             = optional(number)
       min_cores               = optional(number)
