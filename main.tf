@@ -48,7 +48,7 @@ resource "databricks_cluster" "cluster" {
   cluster_name = try(var.cluster.name, null)
   ## Even though called spark_version, it is actually the runtime version, runtime version can be lookuped by spark version data block parameters
   spark_version       = coalesce(try(var.cluster.runtime_version, null), data.databricks_spark_version.spark.id)
-  node_type_id        = data.databricks_node_type.node.id
+  node_type_id        = coalesce(try(var.cluster.node_type.id, null), data.databricks_node_type.node.id)
   driver_node_type_id = try(data.databricks_node_type.driver_node["default"].id, data.databricks_node_type.node.id)
   runtime_engine      = try(var.cluster.runtime_engine, null)
 
@@ -56,11 +56,11 @@ resource "databricks_cluster" "cluster" {
   driver_instance_pool_id = try(var.cluster.driver_instance_pool_id, null)
   policy_id               = try(var.cluster.policy_id, null)
 
-  num_workers                  = try(var.cluster.num_workers, 1)
+  num_workers                  = try(var.cluster.num_workers, null)
   autotermination_minutes      = try(var.cluster.autotermination_minutes, 10) ## set to minimal for cost savings
   is_pinned                    = try(var.cluster.is_pinned, false)
   apply_policy_default_values  = try(var.cluster.apply_policy_default_values, false)
-  enable_elastic_disk          = try(var.cluster.enable_elastic_disk, false)
+  enable_elastic_disk          = try(var.cluster.enable_elastic_disk, null)
   enable_local_disk_encryption = try(var.cluster.enable_local_disk_encryption, null)
 
   dynamic "autoscale" {
